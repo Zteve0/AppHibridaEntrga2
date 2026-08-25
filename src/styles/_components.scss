@@ -1,5 +1,6 @@
 @use 'variables' as *;
 
+.saludo { margin: 0; font-size: 14.5px; font-weight: 600; }
 .stats {
   display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;
   &__card {
