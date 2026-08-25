@@ -15,6 +15,6 @@ export function formatear(fecha) {
 
 export function estadoVencimiento(d) {
   if (d < 0) return { txt: 'Vencido', tipo: 'vencido' };
-  const txt = d === 0 ? 'Hoy' : d + (d === 1 ? ' dia' : ' dias');
+  const txt = d === 0 ? 'Hoy' : d === 1 ? 'Mañana' : d + ' días';
   return { txt, tipo: d <= DIAS_ALERTA ? 'pronto' : 'ok' };
 }
