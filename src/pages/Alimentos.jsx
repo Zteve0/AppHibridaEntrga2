@@ -23,6 +23,7 @@ export default function Alimentos() {
           <button key={c} className={'chips__chip' + (cat === c ? ' active' : '')} onClick={() => setCat(c)}>{c}</button>
         ))}
       </div>
+      {q.trim() !== '' && <p className='ayuda'>{filtrados.length} {filtrados.length === 1 ? 'resultado' : 'resultados'} para «{q}»</p>}
       {grupos.map(g => (
         <section key={g.c}>
           <h3 className='grupo'>{g.c}</h3>
