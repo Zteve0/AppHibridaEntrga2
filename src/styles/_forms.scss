@@ -9,6 +9,7 @@
     width: 100%; border: 1.5px solid $border; border-radius: 10px;
     padding: 11px 14px; font-size: 14px; background: $surface;
     &:hover { border-color: $muted; }
+    &:focus { border-color: $accent-dark; }
   }
   textarea { resize: vertical; }
 }
