@@ -1,15 +1,21 @@
 @use 'variables' as *;
 
-.saludo { margin: 0; font-size: 14.5px; font-weight: 600; }
 .stats {
   display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;
   &__card {
-    background: $bg; border: 1.5px solid $border; border-radius: $radius;
-    padding: 12px; display: flex; flex-direction: column; gap: 2px;
-    strong { font-size: 22px; }
-    span { font-size: 10.5px; color: $muted; font-weight: 500; }
-    &--alerta { background: $warn-bg; border-color: #F5E0BD; strong, span { color: $warn; } }
+    background: $surface; border: 1.5px solid $border; border-radius: $radius;
+    padding: 12px; display: flex; flex-direction: column; gap: 8px;
+    strong { font-size: 20px; }
+    span:last-child { font-size: 10.5px; color: $muted; font-weight: 500; }
   }
+  &__icono {
+    width: 28px; height: 28px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    background: $ok-bg; color: $ok;
+    &--gris { background: #F1F0EE; color: #6E6C68; }
+    &--ambar { background: $warn-bg; color: $warn; }
+  }
+  &__num--ambar { color: $warn; }
 }
 .seccion {
   display: flex; align-items: baseline; justify-content: space-between; margin-top: 6px;
@@ -42,12 +48,12 @@
   }
 }
 .chips {
-  display: flex; gap: 8px; overflow-x: auto; padding-bottom: 2px;
+  display: flex; gap: 8px; overflow-x: auto; padding-bottom: 2px; scrollbar-width: none;
   &__chip {
     flex: none; border: none; border-radius: 999px; padding: 7px 14px;
-    font-size: 12.5px; font-weight: 600; background: $bg; color: $muted; white-space: nowrap;
+    font-size: 12.5px; font-weight: 600; background: #F1F0EE; color: #6E6C68; white-space: nowrap;
     &:hover { color: $ink; }
-    &.active { background: $accent-dark; color: #fff; }
+    &.active { background: #E1F5EA; color: #157F47; }
   }
 }
 .grupo { font-size: 11.5px; font-weight: 700; color: $muted; text-transform: uppercase; letter-spacing: 0.6px; margin: 8px 0 0; }
