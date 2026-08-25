@@ -17,7 +17,7 @@ export default function Compras() {
   return (
     <main className='page'>
       <form className='compras__form' onSubmit={agregar}>
-        <input placeholder='Nuevo item...' value={f.nombre} onChange={e => setF({ ...f, nombre: e.target.value })} />
+        <input placeholder='Ej. Cafe, azucar...' value={f.nombre} onChange={e => setF({ ...f, nombre: e.target.value })} />
         <input type='number' min='0' step='any' placeholder='Cant.' value={f.cantidad} onChange={e => setF({ ...f, cantidad: e.target.value })} />
         <select value={f.unidad} onChange={e => setF({ ...f, unidad: e.target.value })}>{UNIDADES.map(u => <option key={u}>{u}</option>)}</select>
         <button type='submit' aria-label='Agregar item'>+</button>
