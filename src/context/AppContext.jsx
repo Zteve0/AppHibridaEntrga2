@@ -22,8 +22,8 @@ export function AppProvider({ children }) {
 
   const api = {
     alimentos, compras,
-    agregarAlimento: (d) => { const id = uid(); setAlimentos(a => [...a, { id, ...d }]); return id; },
-    editarAlimento: (id, d) => setAlimentos(a => a.map(x => (x.id === id ? { ...x, ...d } : x))),
+    agregarAlimento: (d) => { const id = uid(); setAlimentos(a => [...a, { id, ...d }].sort((x, y) => x.nombre.localeCompare(y.nombre))); return id; },
+    editarAlimento: (id, d) => setAlimentos(a => a.map(x => (x.id === id ? { ...x, ...d } : x)).sort((x, y) => x.nombre.localeCompare(y.nombre))),
     eliminarAlimento: (id) => setAlimentos(a => a.filter(x => x.id !== id)),
     agregarCompra: (d) => setCompras(c => [...c, { id: uid(), comprado: false, ...d }]),
     toggleCompra: (id) => setCompras(c => c.map(x => (x.id === id ? { ...x, comprado: !x.comprado } : x))),

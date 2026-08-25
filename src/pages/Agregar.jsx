@@ -26,7 +26,7 @@ export default function Agregar() {
     <main className='page'>
       <form className='form' onSubmit={guardar}>
         <label className='field'><span>Nombre</span>
-          <input value={f.nombre} onChange={set('nombre')} placeholder='Ej. Leche entera' /></label>
+          <input value={f.nombre} onChange={set('nombre')} placeholder='Ej. Leche entera' autoFocus maxLength={40} /></label>
         <label className='field'><span>Categoria</span>
           <select value={f.categoria} onChange={set('categoria')}>
             <option value=''>Seleccionar categoria</option>
@@ -41,7 +41,7 @@ export default function Agregar() {
         <label className='field'><span>Fecha de vencimiento</span>
           <input type='date' value={f.fecha} onChange={set('fecha')} /></label>
         <label className='field'><span>Nota (opcional)</span>
-          <textarea rows='3' value={f.nota} onChange={set('nota')} placeholder='Ej. Abierta el martes'></textarea></label>
+          <textarea rows='3' value={f.nota} onChange={set('nota')} placeholder='Ej. Abierta el martes, consumir pronto'></textarea></label>
         <button type='submit' className='btn btn--primario'>{existente ? 'Guardar cambios' : 'Guardar alimento'}</button>
         <button type='button' className='btn btn--fantasma' onClick={() => nav(-1)}>Cancelar</button>
       </form>
