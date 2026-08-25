@@ -9,7 +9,7 @@ export default function Vencer() {
   const vigentes = orden.filter(a => diasRestantes(a.fechaVencimiento) >= 0);
   return (
     <main className='page'>
-      <p className='ayuda'>Lo que vence primero aparece de primero.</p>
+      <p className='ayuda'>Ordenado por urgencia: lo que vence primero aparece de primero.</p>
       {vencidos.length > 0 && <>
         <h3 className='grupo'>Vencidos ({vencidos.length})</h3>
         <div className='lista'>{vencidos.map(a => <ItemAlimento key={a.id} a={a} conFecha />)}</div>
