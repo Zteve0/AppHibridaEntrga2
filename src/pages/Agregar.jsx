@@ -26,7 +26,7 @@ export default function Agregar() {
     <main className='page'>
       <form className='form' onSubmit={guardar}>
         <label className='field'><span>Nombre</span>
-          <input value={f.nombre} onChange={set('nombre')} placeholder='Ej. Leche entera' /></label>
+          <input value={f.nombre} onChange={set('nombre')} placeholder='Ej. Leche entera' autoFocus maxLength={40} /></label>
         <label className='field'><span>Categoria</span>
           <select value={f.categoria} onChange={set('categoria')}>
             <option value=''>Seleccionar categoria</option>
