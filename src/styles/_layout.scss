@@ -1,0 +1,41 @@
+@use 'variables' as *;
+
+.app {
+  max-width: 430px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: $surface;
+  box-shadow: 0 0 24px rgba(43, 43, 40, 0.08);
+  padding-bottom: $tabbar-h + 24px;
+}
+.navbar {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 20px; background: $surface; border-bottom: 1.5px solid $border;
+  &__logo { width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; background: $ok-bg; border-radius: 10px; color: $accent-dark; flex: none; }
+  &__nombre { font-size: 17px; font-weight: 700; }
+  &__pagina { margin-left: auto; font-size: 12.5px; color: $muted; font-weight: 600; }
+}
+.page { padding: 18px 20px; display: flex; flex-direction: column; gap: 14px; }
+.tabbar {
+  position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 430px; max-width: 100%; height: $tabbar-h;
+  background: $surface; border-top: 1.5px solid $border;
+  display: flex; z-index: 20;
+  &__item {
+    flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+    background: none; border: none; font-size: 10px; font-weight: 600; color: $muted;
+    &.active { color: $ink; }
+    &:hover { color: $accent-dark; }
+  }
+  &__fab {
+    flex: 1; display: flex; align-items: flex-start; justify-content: center;
+    a {
+      width: 52px; height: 52px; margin-top: -18px; border-radius: 50%;
+      background: $accent; color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 6px 14px rgba(46, 204, 113, 0.35);
+      &:hover { background: $accent-dark; color: #fff; }
+    }
+  }
+}

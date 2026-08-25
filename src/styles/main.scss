@@ -1,0 +1,5 @@
+// Punto de entrada SASS: integra las clases parciales
+@use 'base';
+@use 'layout';
+@use 'components';
+@use 'forms';

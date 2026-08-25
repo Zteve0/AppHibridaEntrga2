@@ -1,0 +1,83 @@
+@use 'variables' as *;
+
+.stats {
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;
+  &__card {
+    background: $bg; border: 1.5px solid $border; border-radius: $radius;
+    padding: 12px; display: flex; flex-direction: column; gap: 2px;
+    strong { font-size: 22px; }
+    span { font-size: 10.5px; color: $muted; font-weight: 500; }
+    &--alerta { background: $warn-bg; border-color: #F5E0BD; strong, span { color: $warn; } }
+  }
+}
+.seccion {
+  display: flex; align-items: baseline; justify-content: space-between; margin-top: 6px;
+  h2 { font-size: 15px; }
+  &__link { font-size: 12.5px; font-weight: 600; color: $accent-dark; }
+}
+.lista { display: flex; flex-direction: column; gap: 8px; }
+.item {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  border: 1.5px solid $border; border-radius: $radius; padding: 12px 14px; background: $surface;
+  &:hover { border-color: $accent-dark; color: $ink; }
+  &__info { display: flex; flex-direction: column; gap: 2px; }
+  &__nombre { font-size: 14px; font-weight: 600; }
+  &__meta { font-size: 12px; color: $muted; }
+}
+.badge {
+  font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 999px; white-space: nowrap;
+  &--vencido { background: $danger-bg; color: $danger; }
+  &--pronto { background: $warn-bg; color: $warn; }
+  &--ok { background: $ok-bg; color: $ok; }
+}
+.quick {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+  &__btn {
+    display: flex; align-items: center; gap: 10px;
+    background: $bg; border: 1.5px solid $border; border-radius: $radius;
+    padding: 14px; font-size: 13px; font-weight: 600;
+    &:hover { border-color: $accent-dark; color: $ink; }
+    &--verde { color: $accent-dark; }
+  }
+}
+.chips {
+  display: flex; gap: 8px; overflow-x: auto; padding-bottom: 2px;
+  &__chip {
+    flex: none; border: none; border-radius: 999px; padding: 7px 14px;
+    font-size: 12.5px; font-weight: 600; background: $bg; color: $muted; white-space: nowrap;
+    &:hover { color: $ink; }
+    &.active { background: $accent-dark; color: #fff; }
+  }
+}
+.grupo { font-size: 11.5px; font-weight: 700; color: $muted; text-transform: uppercase; letter-spacing: 0.6px; margin: 8px 0 0; }
+.vacio, .ayuda { font-size: 12.5px; color: $muted; text-align: center; margin: 8px 0; }
+.ayuda { text-align: left; margin: 0; }
+.volver { display: inline-flex; align-items: center; gap: 6px; align-self: flex-start; background: none; border: none; font-size: 13px; font-weight: 600; color: $muted; padding: 0; &:hover { color: $ink; } }
+.detalle__cab { display: flex; align-items: center; justify-content: space-between; gap: 10px; h2 { font-size: 20px; } }
+.detalle {
+  margin: 0; border: 1.5px solid $border; border-radius: $radius; overflow: hidden;
+  > div { display: flex; justify-content: space-between; padding: 13px 16px; }
+  > div + div { border-top: 1px solid $border; }
+  dt { font-size: 13px; color: $muted; }
+  dd { margin: 0; font-size: 13.5px; font-weight: 600; }
+}
+.nota { background: $bg; border: 1.5px solid $border; border-radius: $radius; padding: 12px 14px; font-size: 13px; margin: 0; }
+.detalle__acciones { display: flex; gap: 10px; }
+.btn {
+  border-radius: $radius; padding: 13px; font-size: 14px; font-weight: 700; border: none;
+  &--primario { background: $accent-dark; color: #fff; &:hover { background: #157F47; } }
+  &--fantasma { background: none; color: $muted; font-weight: 600; &:hover { color: $ink; } }
+  &--borde { flex: 1; background: $surface; border: 2px solid $ink; color: $ink; &:hover { background: $bg; } }
+  &--peligro { flex: 1; background: $danger-bg; border: 2px solid #F5C6C0; color: $danger; &:hover { background: #FADBD8; } }
+}
+.compra {
+  display: flex; align-items: center; gap: 12px;
+  border: 1.5px solid $border; border-radius: $radius; padding: 11px 14px;
+  &--hecha { opacity: 0.7; .item__nombre, .item__meta { text-decoration: line-through; color: $muted; } }
+  &__check {
+    width: 22px; height: 22px; border: 2px solid $accent-dark; border-radius: 6px; background: $surface; padding: 0; flex: none;
+    display: flex; align-items: center; justify-content: center; color: #fff;
+    &:hover { background: $ok-bg; }
+    &--on { background: $accent-dark; &:hover { background: $accent-dark; } }
+  }
+}

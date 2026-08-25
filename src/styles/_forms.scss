@@ -1,0 +1,23 @@
+@use 'variables' as *;
+
+.form { display: flex; flex-direction: column; gap: 14px; }
+.form__fila { display: grid; grid-template-columns: 1fr 120px; gap: 10px; }
+.field {
+  display: flex; flex-direction: column; gap: 5px;
+  span { font-size: 12px; font-weight: 600; color: $muted; }
+  input, select, textarea {
+    width: 100%; border: 1.5px solid $border; border-radius: 10px;
+    padding: 11px 14px; font-size: 14px; background: $surface;
+    &:hover { border-color: $muted; }
+  }
+  textarea { resize: vertical; }
+}
+.buscador {
+  width: 100%; background: $bg; border: 1.5px solid $border; border-radius: 10px;
+  padding: 11px 14px; font-size: 14px;
+}
+.compras__form {
+  display: grid; grid-template-columns: 1fr 62px 70px 44px; gap: 8px;
+  input, select { min-width: 0; border: 1.5px solid $border; border-radius: 10px; padding: 10px 10px; font-size: 13.5px; background: $surface; }
+  button { background: $accent-dark; color: #fff; border: none; border-radius: 10px; font-size: 20px; line-height: 1; &:hover { background: #157F47; } }
+}
