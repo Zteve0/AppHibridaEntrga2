@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useNavigate, useParams, Navigate } from 'react-router-dom';
 import { useApp } from '../context/AppContext.jsx';
 import { diasRestantes, formatear, estadoVencimiento } from '../utils/fechas.js';
@@ -8,6 +9,10 @@ export default function Detalle() {
   const { alimentos, eliminarAlimento } = useApp();
   const nav = useNavigate();
   const a = alimentos.find(x => x.id === id);
+  useEffect(() => {
+    if (a) document.title = a.nombre + ' — MiNevera';
+    return () => { document.title = 'MiNevera — Tu despensa organizada'; };
+  }, [a]);
   if (!a) return <Navigate to='/alimentos' replace />;
   const d = diasRestantes(a.fechaVencimiento);
   const e = estadoVencimiento(d);
