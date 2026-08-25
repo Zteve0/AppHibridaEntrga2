@@ -1,4 +1,4 @@
-export const CATEGORIAS = ['Lacteos', 'Carnes', 'Verduras', 'Frutas', 'Cereales', 'Bebidas', 'Condimentos', 'Congelados', 'Otros'];
+export const CATEGORIAS = ['Lacteos', 'Carnes', 'Verduras', 'Frutas', 'Cereales', 'Panaderia', 'Bebidas', 'Condimentos', 'Congelados', 'Otros'];
 export const UNIDADES = ['kg', 'L', 'un'];
 export const DIAS_ALERTA = 3;
 
@@ -15,6 +15,6 @@ export function formatear(fecha) {
 
 export function estadoVencimiento(d) {
   if (d < 0) return { txt: 'Vencido', tipo: 'vencido' };
-  const txt = d === 0 ? 'Hoy' : d + (d === 1 ? ' dia' : ' dias');
+  const txt = d === 0 ? 'Hoy' : d === 1 ? 'Mañana' : d + ' días';
   return { txt, tipo: d <= DIAS_ALERTA ? 'pronto' : 'ok' };
 }

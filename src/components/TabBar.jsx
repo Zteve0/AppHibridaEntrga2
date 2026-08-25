@@ -4,11 +4,11 @@ import { IconoInicio, IconoLista, IconoMas, IconoReloj, IconoCarrito } from './I
 export default function TabBar() {
   const cls = ({ isActive }) => 'tabbar__item' + (isActive ? ' active' : '');
   return (
-    <nav className='tabbar'>
+    <nav className='tabbar' aria-label='Navegación principal'>
       <NavLink to='/' end className={cls}><IconoInicio /><span>Inicio</span></NavLink>
       <NavLink to='/alimentos' className={cls}><IconoLista /><span>Alimentos</span></NavLink>
       <div className='tabbar__fab'>
-        <Link to='/agregar' aria-label='Agregar alimento'><IconoMas size={24} /></Link>
+        <Link to='/agregar' aria-label='Agregar alimento' title='Agregar alimento'><IconoMas size={24} /></Link>
       </div>
       <NavLink to='/vencer' className={cls}><IconoReloj /><span>Vencer</span></NavLink>
       <NavLink to='/compras' className={cls}><IconoCarrito /><span>Compras</span></NavLink>
