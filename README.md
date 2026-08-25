@@ -51,6 +51,13 @@ minevera-app/
 - Navegación coherente: barra superior con nombre e ícono de la app, tab bar inferior fija con 5 accesos y botón central destacado.
 - Tipografía: para usar Google Fonts sin internet, descarga **Archivo** (fonts.google.com), pon los `.woff2` en `src/assets/fonts/` y decláralos con `@font-face` en `_base.scss`; ya está como primera opción de la pila tipográfica.
 
+## Decisiones técnicas
+
+- **HashRouter** en vez de BrowserRouter: la navegación funciona sin servidor, incluso abriendo `dist/index.html` directamente — clave para el requisito offline.
+- **localStorage** como única fuente de datos: sin backend, la app arranca con datos semilla la primera vez.
+- **Inventario ordenado alfabéticamente** al agregar/editar, y alertas por umbral de 3 días (`DIAS_ALERTA`).
+- **Colores suaves**: superficies blancas, bordes #ECEAE6, chips y métricas con tintes claros; el verde queda solo para acciones y estados positivos.
+
 ## Notas de la entrega
 
 - Ver `COMMITS.md` para el plan de trabajo por integrante (ramas y commits).
