@@ -41,7 +41,7 @@ export default function Agregar() {
         <label className='field'><span>Fecha de vencimiento</span>
           <input type='date' value={f.fecha} onChange={set('fecha')} /></label>
         <label className='field'><span>Nota (opcional)</span>
-          <textarea rows='3' value={f.nota} onChange={set('nota')} placeholder='Ej. Abierta el martes'></textarea></label>
+          <textarea rows='3' value={f.nota} onChange={set('nota')} placeholder='Ej. Abierta el martes, consumir pronto'></textarea></label>
         <button type='submit' className='btn btn--primario'>{existente ? 'Guardar cambios' : 'Guardar alimento'}</button>
         <button type='button' className='btn btn--fantasma' onClick={() => nav(-1)}>Cancelar</button>
       </form>

@@ -1,4 +1,4 @@
-export const CATEGORIAS = ['Lacteos', 'Carnes', 'Verduras', 'Frutas', 'Cereales', 'Bebidas', 'Condimentos', 'Congelados', 'Otros'];
+export const CATEGORIAS = ['Lacteos', 'Carnes', 'Verduras', 'Frutas', 'Cereales', 'Panaderia', 'Bebidas', 'Condimentos', 'Congelados', 'Otros'];
 export const UNIDADES = ['kg', 'L', 'un'];
 export const DIAS_ALERTA = 3;
 
