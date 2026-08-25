@@ -8,7 +8,7 @@ App híbrida para gestionar los alimentos del hogar: inventario, alertas de venc
 
 ## Ejecución del proyecto
 
-Requisitos: Node.js 18+ y npm.
+Requisitos: Node.js 18+ y npm (probado con Node.js 20.x).
 
 ```bash
 npm install      # instala dependencias (solo la primera vez)
