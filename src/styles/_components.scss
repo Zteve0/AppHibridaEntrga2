@@ -67,7 +67,7 @@
   > div { display: flex; justify-content: space-between; padding: 13px 16px; }
   > div + div { border-top: 1px solid $border; }
   dt { font-size: 13px; color: $muted; }
-  dd { margin: 0; font-size: 13.5px; font-weight: 600; }
+  dd { margin: 0; font-size: 13.5px; font-weight: 700; }
 }
 .nota { background: $bg; border: 1.5px solid $border; border-radius: $radius; padding: 12px 14px; font-size: 13px; margin: 0; }
 .detalle__acciones { display: flex; gap: 10px; }
