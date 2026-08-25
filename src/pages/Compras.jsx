@@ -41,7 +41,7 @@ export default function Compras() {
           </div>
         ))}
       </div>
-      {comprados.length > 0 && <button className='btn btn--peligro' onClick={limpiarComprados}>Eliminar comprados</button>}
+      {comprados.length > 0 && <button className='btn btn--peligro' onClick={() => confirm('¿Eliminar los ' + comprados.length + ' items comprados?') && limpiarComprados()}>Eliminar comprados</button>}
     </main>
   );
 }
