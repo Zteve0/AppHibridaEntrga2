@@ -19,6 +19,14 @@ npm run preview  # sirve dist/ en local para probar el build
 
 El build de `dist/` usa rutas relativas y `HashRouter`, así que funciona en cualquier carpeta local sin servidor ni conexión — es el bundle que se usará para crear el instalador.
 
+## Capturas
+
+| Inicio | Alimentos | Lista de compras |
+| --- | --- | --- |
+| ![Pantalla de inicio con el resumen y los proximos a vencer](docs/capturas/inicio.png) | ![Inventario agrupado por categoria con buscador y chips](docs/capturas/alimentos.png) | ![Lista de compras con pendientes y comprados](docs/capturas/compras.png) |
+
+Capturas tomadas del build de produccion (`npm run build`) en viewport movil de 390x844.
+
 ## Stack
 
 | Capa | Herramienta |
