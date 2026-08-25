@@ -4,6 +4,11 @@ import { diasRestantes, DIAS_ALERTA } from '../utils/fechas.js';
 import ItemAlimento from '../components/ItemAlimento.jsx';
 import { IconoMas, IconoLista, IconoCarrito, IconoReloj } from '../components/Iconos.jsx';
 
+function saludo() {
+  const h = new Date().getHours();
+  return h < 12 ? 'Buenos días' : h < 19 ? 'Buenas tardes' : 'Buenas noches';
+}
+
 export default function Inicio() {
   const { alimentos } = useApp();
   const conDias = alimentos.map(a => ({ ...a, d: diasRestantes(a.fechaVencimiento) }));
@@ -12,6 +17,7 @@ export default function Inicio() {
   const categorias = new Set(alimentos.map(a => a.categoria)).size;
   return (
     <main className='page'>
+      <p className='saludo'>{saludo()} 👋 Así va tu despensa:</p>
       <div className='stats'>
         <div className='stats__card'><strong>{alimentos.length}</strong><span>Productos</span></div>
         <div className='stats__card'><strong>{categorias}</strong><span>Categorias</span></div>
