@@ -83,7 +83,7 @@
   border: 1.5px solid $border; border-radius: $radius; padding: 11px 14px;
   &--hecha { opacity: 0.7; .item__nombre, .item__meta { text-decoration: line-through; color: $muted; } }
   &__check {
-    width: 22px; height: 22px; border: 2px solid $accent-dark; border-radius: 6px; background: $surface; padding: 0; flex: none;
+    width: 22px; height: 22px; border: 2px solid $accent-dark; border-radius: 7px; background: $surface; padding: 0; flex: none;
     display: flex; align-items: center; justify-content: center; color: #fff;
     &:hover { background: $ok-bg; }
     &--on { background: $accent-dark; &:hover { background: $accent-dark; } }
