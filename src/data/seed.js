@@ -8,7 +8,9 @@ export function seedAlimentos() {
     { id: 'a4', nombre: 'Queso fresco', categoria: 'Lacteos', cantidad: 0.3, unidad: 'kg', fechaVencimiento: off(-5), nota: '' },
     { id: 'a5', nombre: 'Tomate chonto', categoria: 'Verduras', cantidad: 1, unidad: 'kg', fechaVencimiento: off(6), nota: '' },
     { id: 'a6', nombre: 'Manzana verde', categoria: 'Frutas', cantidad: 8, unidad: 'un', fechaVencimiento: off(12), nota: '' },
-    { id: 'a7', nombre: 'Arroz blanco', categoria: 'Cereales', cantidad: 5, unidad: 'kg', fechaVencimiento: off(90), nota: 'Bolsa grande' }
+    { id: 'a7', nombre: 'Arroz blanco', categoria: 'Cereales', cantidad: 5, unidad: 'kg', fechaVencimiento: off(90), nota: 'Bolsa grande' },
+    { id: 'a8', nombre: 'Pan tajado', categoria: 'Cereales', cantidad: 1, unidad: 'un', fechaVencimiento: off(2), nota: '' },
+    { id: 'a9', nombre: 'Jugo de naranja', categoria: 'Bebidas', cantidad: 1.5, unidad: 'L', fechaVencimiento: off(5), nota: '' }
   ];
 }
 
