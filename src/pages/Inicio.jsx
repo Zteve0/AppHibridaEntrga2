@@ -2,12 +2,7 @@ import { Link } from 'react-router-dom';
 import { useApp } from '../context/AppContext.jsx';
 import { diasRestantes, DIAS_ALERTA } from '../utils/fechas.js';
 import ItemAlimento from '../components/ItemAlimento.jsx';
-import { IconoMas, IconoLista, IconoCarrito, IconoReloj } from '../components/Iconos.jsx';
-
-function saludo() {
-  const h = new Date().getHours();
-  return h < 12 ? 'Buenos días' : h < 19 ? 'Buenas tardes' : 'Buenas noches';
-}
+import { IconoMas, IconoLista, IconoCarrito, IconoReloj, IconoNevera } from '../components/Iconos.jsx';
 
 export default function Inicio() {
   const { alimentos } = useApp();
@@ -17,11 +12,11 @@ export default function Inicio() {
   const categorias = new Set(alimentos.map(a => a.categoria)).size;
   return (
     <main className='page'>
-      <p className='saludo'>{saludo()} 👋 Así va tu despensa:</p>
+      <h3 className='grupo'>Resumen</h3>
       <div className='stats'>
-        <div className='stats__card'><strong>{alimentos.length}</strong><span>Productos</span></div>
-        <div className='stats__card'><strong>{categorias}</strong><span>Categorias</span></div>
-        <div className='stats__card stats__card--alerta'><strong>{porVencer}</strong><span>Por vencer</span></div>
+        <div className='stats__card'><span className='stats__icono'><IconoLista size={14} /></span><strong>{alimentos.length}</strong><span>Productos</span></div>
+        <div className='stats__card'><span className='stats__icono stats__icono--gris'><IconoNevera size={14} /></span><strong>{categorias}</strong><span>Categorías</span></div>
+        <div className='stats__card'><span className='stats__icono stats__icono--ambar'><IconoReloj size={14} /></span><strong className='stats__num--ambar'>{porVencer}</strong><span>Por vencer</span></div>
       </div>
       <div className='seccion'>
         <h2>Proximos a vencer</h2>
