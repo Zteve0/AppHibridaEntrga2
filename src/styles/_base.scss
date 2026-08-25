@@ -1,0 +1,10 @@
+@use 'variables' as *;
+
+* { box-sizing: border-box; }
+body { margin: 0; background: $bg; color: $ink; font-family: $font; -webkit-font-smoothing: antialiased; }
+a { color: $ink; text-decoration: none; }
+a:hover { color: $accent-dark; }
+button { font-family: inherit; cursor: pointer; }
+input, select, textarea { font-family: inherit; color: $ink; }
+:focus-visible { outline: 2px solid $accent-dark; outline-offset: 1px; }
+h2, h3 { margin: 0; }
