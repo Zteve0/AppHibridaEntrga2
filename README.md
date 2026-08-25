@@ -3,7 +3,7 @@
 App híbrida para gestionar los alimentos del hogar: inventario, alertas de vencimiento y lista de compras. **Funciona 100% sin internet.**
 
 - **Repositorio:** https://github.com/Zteve0/AppHibridaEntrga2
-- **Prototipo (Figma):** https://www.figma.com/design/zDGVfp74RDr4VcFCuuM7we/Wireframe-App-Alimentos?node-id=0-1&t=9W2ChC2TUd94zbPV-1
+- **Prototipo (Figma):** [Ver wireframe](https://www.figma.com/design/zDGVfp74RDr4VcFCuuM7we/Wireframe-App-Alimentos?node-id=0-1&t=9W2ChC2TUd94zbPV-1)
 - **Equipo:** Steve Ellis · Juan Andrés Zhero · Integrante 3
 
 ## Ejecución del proyecto
