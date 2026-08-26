@@ -5,3 +5,14 @@ dist/
 .vscode/
 .idea/
 .env
+
+# Android / Capacitor
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/.idea/
+android/app/release/
+*.keystore
+*.jks
+key.properties
