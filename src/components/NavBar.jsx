@@ -1,5 +1,5 @@
-import { useLocation } from 'react-router-dom';
-import { IconoNevera } from './Iconos.jsx';
+import { Link, useLocation } from 'react-router-dom';
+import { IconoNevera, IconoInfo } from './Iconos.jsx';
 import { useApp } from '../context/AppContext.jsx';
 import { diasRestantes, DIAS_ALERTA } from '../utils/fechas.js';
 
@@ -9,7 +9,8 @@ const titulos = [
   ['/alimentos', 'Mis alimentos'],
   ['/agregar', 'Agregar'],
   ['/vencer', 'Proximos a vencer'],
-  ['/compras', 'Lista de compras']
+  ['/compras', 'Lista de compras'],
+  ['/creditos', 'Créditos']
 ];
 
 export default function NavBar() {
@@ -23,6 +24,7 @@ export default function NavBar() {
       <span className='navbar__nombre'>MiNevera</span>
       {porVencer > 0 && <span className='navbar__alerta'>{porVencer} por vencer</span>}
       <span className='navbar__pagina'>{actual ? actual[1] : 'Inicio'}</span>
+      <Link to='/creditos' className='navbar__info' aria-label='Créditos' title='Créditos'><IconoInfo size={16} /></Link>
     </header>
   );
 }

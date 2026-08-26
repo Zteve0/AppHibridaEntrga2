@@ -16,13 +16,13 @@ export default function Detalle() {
   if (!a) return <Navigate to='/alimentos' replace />;
   const d = diasRestantes(a.fechaVencimiento);
   const e = estadoVencimiento(d);
-  const diasTxt = d < 0 ? 'Vencido hace ' + -d + (d === -1 ? ' dia' : ' dias') : d === 0 ? 'Vence hoy' : d + (d === 1 ? ' dia' : ' dias');
+  const diasTxt = !isFinite(d) ? 'Sin fecha de vencimiento' : d < 0 ? 'Vencido hace ' + -d + (d === -1 ? ' dia' : ' dias') : d === 0 ? 'Vence hoy' : d === 1 ? 'Mañana' : d + ' dias';
   const eliminar = () => {
     if (confirm('Eliminar "' + a.nombre + '" de tu despensa?')) { eliminarAlimento(id); nav('/alimentos'); }
   };
   return (
     <main className='page'>
-      <button className='volver' onClick={() => nav(-1)}><IconoVolver size={16} />Atras</button>
+      <button className='volver' onClick={() => nav(-1)}><IconoVolver size={16} />Volver</button>
       <div className='detalle__cab'>
         <h2>{a.nombre}</h2>
         <span className={'badge badge--' + e.tipo}>{e.txt}</span>

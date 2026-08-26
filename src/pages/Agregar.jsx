@@ -14,8 +14,8 @@ export default function Agregar() {
   const set = (k) => (e) => setF({ ...f, [k]: e.target.value });
   const guardar = (e) => {
     e.preventDefault();
-    if (!f.nombre.trim() || !f.categoria || !(Number(f.cantidad) > 0) || !f.fecha) {
-      alert('Completa nombre, categoria, cantidad y fecha de vencimiento.');
+    if (!f.nombre.trim() || !f.categoria || !(Number(f.cantidad) > 0)) {
+      alert('Completa nombre, categoria y cantidad.');
       return;
     }
     const datos = { nombre: f.nombre.trim(), categoria: f.categoria, cantidad: Number(f.cantidad), unidad: f.unidad, fechaVencimiento: f.fecha, nota: f.nota.trim() };
@@ -26,22 +26,22 @@ export default function Agregar() {
     <main className='page'>
       <form className='form' onSubmit={guardar}>
         <label className='field'><span>Nombre</span>
-          <input value={f.nombre} onChange={set('nombre')} placeholder='Ej. Leche entera' autoFocus maxLength={40} /></label>
+          <input id='alimento-nombre' name='nombre' value={f.nombre} onChange={set('nombre')} placeholder='Ej. Leche entera' autoFocus maxLength={40} /></label>
         <label className='field'><span>Categoria</span>
-          <select value={f.categoria} onChange={set('categoria')}>
+          <select id='alimento-categoria' name='categoria' value={f.categoria} onChange={set('categoria')}>
             <option value=''>Seleccionar categoria</option>
             {CATEGORIAS.map(c => <option key={c}>{c}</option>)}
           </select></label>
         <div className='form__fila'>
           <label className='field'><span>Cantidad</span>
-            <input type='number' min='0' step='any' value={f.cantidad} onChange={set('cantidad')} placeholder='0' /></label>
+            <input id='alimento-cantidad' name='cantidad' type='number' min='0' step='any' value={f.cantidad} onChange={set('cantidad')} placeholder='0' /></label>
           <label className='field'><span>Unidad</span>
-            <select value={f.unidad} onChange={set('unidad')}>{UNIDADES.map(u => <option key={u}>{u}</option>)}</select></label>
+            <select id='alimento-unidad' name='unidad' value={f.unidad} onChange={set('unidad')}>{UNIDADES.map(u => <option key={u}>{u}</option>)}</select></label>
         </div>
-        <label className='field'><span>Fecha de vencimiento</span>
-          <input type='date' value={f.fecha} onChange={set('fecha')} /></label>
+        <label className='field'><span>Fecha de vencimiento (opcional)</span>
+          <input id='alimento-fecha' name='fecha' type='date' value={f.fecha} onChange={set('fecha')} /></label>
         <label className='field'><span>Nota (opcional)</span>
-          <textarea rows='3' value={f.nota} onChange={set('nota')} placeholder='Ej. Abierta el martes, consumir pronto'></textarea></label>
+          <textarea id='alimento-nota' name='nota' rows='3' value={f.nota} onChange={set('nota')} placeholder='Ej. Abierta el martes'></textarea></label>
         <button type='submit' className='btn btn--primario'>{existente ? 'Guardar cambios' : 'Guardar alimento'}</button>
         <button type='button' className='btn btn--fantasma' onClick={() => nav(-1)}>Cancelar</button>
       </form>
