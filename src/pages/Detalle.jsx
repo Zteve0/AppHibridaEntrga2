@@ -22,7 +22,7 @@ export default function Detalle() {
   };
   return (
     <main className='page'>
-      <button className='volver' onClick={() => nav(-1)}><IconoVolver size={16} />Volver</button>
+      <button className='volver' onClick={() => nav(-1)}><IconoVolver size={16} />Atras</button>
       <div className='detalle__cab'>
         <h2>{a.nombre}</h2>
         <span className={'badge badge--' + e.tipo}>{e.txt}</span>
