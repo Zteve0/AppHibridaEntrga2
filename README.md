@@ -4,7 +4,7 @@ App híbrida para gestionar los alimentos del hogar: inventario, alertas de venc
 
 - **Repositorio:** https://github.com/Zteve0/AppHibridaEntrga2
 - **Prototipo (Figma):** https://www.figma.com/design/zDGVfp74RDr4VcFCuuM7we/Wireframe-App-Alimentos?node-id=0-1&t=9W2ChC2TUd94zbPV-1
-- **Equipo:** Steve Ellis · Juan Andrés Zhero · Integrante 3
+- **Equipo:** Federico Martínez López · Steve Ellis · Juan Andrés Zhero
 
 ## Ejecución del proyecto
 
