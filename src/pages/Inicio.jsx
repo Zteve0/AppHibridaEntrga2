@@ -20,7 +20,7 @@ export default function Inicio() {
       </div>
       <div className='seccion'>
         <h2>Proximos a vencer</h2>
-        <Link to='/vencer' className='seccion__link'>Ver todos</Link>
+        <Link to='/vencer' className='seccion__link'>Ver todos →</Link>
       </div>
       <div className='lista'>
         {top3.map(a => <ItemAlimento key={a.id} a={a} />)}
