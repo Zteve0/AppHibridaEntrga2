@@ -17,7 +17,7 @@ export default function Alimentos() {
     .filter(g => g.items.length > 0);
   return (
     <main className='page'>
-      <input className='buscador' placeholder='Buscar alimento...' value={q} onChange={e => setQ(e.target.value)} />
+      <input className='buscador' id='buscador' name='buscar' type='search' aria-label='Buscar alimento' placeholder='Buscar alimento...' value={q} onChange={e => setQ(e.target.value)} />
       <div className='chips'>
         {['Todos', ...activas].map(c => (
           <button key={c} className={'chips__chip' + (cat === c ? ' active' : '')} onClick={() => setCat(c)}>{c}</button>

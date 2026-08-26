@@ -8,4 +8,5 @@ export const IconoMas = (p) => (<Svg {...p}><line x1='12' y1='5' x2='12' y2='19'
 export const IconoReloj = (p) => (<Svg {...p}><circle cx='12' cy='12' r='10' /><polyline points='12 6 12 12 16 14' /></Svg>);
 export const IconoCarrito = (p) => (<Svg {...p}><circle cx='9' cy='21' r='1' /><circle cx='20' cy='21' r='1' /><path d='M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6' /></Svg>);
 export const IconoVolver = (p) => (<Svg {...p}><polyline points='15 18 9 12 15 6' /></Svg>);
+export const IconoInfo = (p) => (<Svg {...p}><circle cx='12' cy='12' r='10' /><line x1='12' y1='16' x2='12' y2='12' /><line x1='12' y1='8' x2='12.01' y2='8' /></Svg>);
 export const IconoCheck = (p) => (<Svg {...p}><polyline points='20 6 9 17 4 12' /></Svg>);

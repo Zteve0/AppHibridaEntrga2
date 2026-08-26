@@ -17,11 +17,12 @@ export default function Compras() {
   return (
     <main className='page'>
       <form className='compras__form' onSubmit={agregar}>
-        <input placeholder='Ej. Cafe, azucar...' value={f.nombre} onChange={e => setF({ ...f, nombre: e.target.value })} />
-        <input type='number' min='0' step='any' placeholder='Cant.' value={f.cantidad} onChange={e => setF({ ...f, cantidad: e.target.value })} />
-        <select value={f.unidad} onChange={e => setF({ ...f, unidad: e.target.value })}>{UNIDADES.map(u => <option key={u}>{u}</option>)}</select>
+        <input placeholder='Nuevo item...' value={f.nombre} onChange={e => setF({ ...f, nombre: e.target.value })} />
+        <input id='compra-cantidad' name='cantidad' aria-label='Cantidad' type='number' min='0' step='any' placeholder='Cant.' value={f.cantidad} onChange={e => setF({ ...f, cantidad: e.target.value })} />
+        <select id='compra-unidad' name='unidad' aria-label='Unidad' value={f.unidad} onChange={e => setF({ ...f, unidad: e.target.value })}>{UNIDADES.map(u => <option key={u}>{u}</option>)}</select>
         <button type='submit' aria-label='Agregar item'>+</button>
       </form>
+      <p className='ayuda'>Al marcar un ítem como comprado se agrega automáticamente a Mis Alimentos.</p>
       <h3 className='grupo'>Pendientes ({pendientes.length})</h3>
       <div className='lista'>
         {pendientes.map(c => (
