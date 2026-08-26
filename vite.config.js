@@ -5,12 +5,15 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   base: './',
+  esbuild: { legalComments: 'none' },
+  css: { devSourcemap: false },
   build: {
     outDir: 'dist',
     cssCodeSplit: false,
     assetsInlineLimit: 100000000,
     target: 'es2020',
     minify: 'esbuild',
-    reportCompressedSize: false
+    reportCompressedSize: false,
+    sourcemap: false
   }
 });
