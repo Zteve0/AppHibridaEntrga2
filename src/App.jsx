@@ -14,7 +14,7 @@ import Creditos from './pages/Creditos.jsx';
 export default function App() {
   return (
     <AppProvider>
-      <HashRouter>
+      <HashRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
         <div className='app'>
           <NavBar />
           <Routes>
