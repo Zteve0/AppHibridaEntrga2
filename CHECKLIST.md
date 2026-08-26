@@ -18,7 +18,7 @@ Marca con [x] a medida que avancen. Última actualización: tanda 2 de commits.
 - [x] `.gitignore` (node_modules, dist)
 - [x] `README.md` con instrucciones de ejecución
 - [ ] Mínimo 40 commits en total
-- [x] Integrante 3: 22 commits completados
+- [x] Federico Martínez López: 22 commits completados
 - [ ] Steve: 10 commits en rama `feature/estilos`
 - [ ] Juan: 10 commits en rama `feature/contenido`
 - [ ] Uso de ramas visible (develop + features + merges a main)
@@ -52,8 +52,8 @@ Marca con [x] a medida que avancen. Última actualización: tanda 2 de commits.
 - [x] Barra de navegación con nombre e ícono de la app
 - [x] Íconos SVG propios (fondo transparente)
 - [ ] Google Fonts sin internet: descargar Archivo (fonts.google.com), poner los .woff2 en `src/assets/fonts/` y declarar `@font-face` en `_base.scss` (la pila ya la tiene de primera)
-- [ ] Preparar sustentación: repartir qué presenta cada integrante (sugerencia: Integrante 3 = arquitectura y demo, Steve = SASS y estilos, Juan = repo/ramas y build)
+- [ ] Preparar sustentación: repartir qué presenta cada integrante (sugerencia: Federico = arquitectura y demo, Steve = SASS y estilos, Juan = repo/ramas y build)
 
-## Commits del Integrante 3
+## Commits de Federico
 
 Completados (22). Quedan: los 10 de Steve (`feature/estilos`) y los 10 de Juan (`feature/contenido`) — ver COMMITS.md.

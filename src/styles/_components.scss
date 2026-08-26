@@ -36,6 +36,7 @@
   &--vencido { background: $danger-bg; color: $danger; }
   &--pronto { background: $warn-bg; color: $warn; }
   &--ok { background: $ok-bg; color: $ok; }
+  &--sinfecha { background: #F1F0EE; color: #6E6C68; }
 }
 .quick {
   display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
@@ -76,6 +77,35 @@
   &--fantasma { background: none; color: $muted; font-weight: 600; &:hover { color: $ink; } }
   &--borde { flex: 1; background: $surface; border: 2px solid $ink; color: $ink; &:hover { background: $bg; } }
   &--peligro { flex: 1; background: $danger-bg; border: 2px solid #F5C6C0; color: $danger; &:hover { background: #FADBD8; } }
+}
+.creditos {
+  &__cab {
+    display: flex; align-items: center; gap: 12px;
+    padding-bottom: 14px; border-bottom: 1.5px solid $border;
+    div { display: flex; flex-direction: column; gap: 2px; }
+    strong { font-size: 17px; }
+    span { font-size: 12.5px; color: $muted; }
+  }
+  &__logo {
+    width: 48px; height: 48px; border-radius: $radius; flex: none;
+    display: flex; align-items: center; justify-content: center;
+    background: $ok-bg; color: $accent-dark;
+  }
+  &__nota { margin: 4px 0 0; font-size: 11.5px; color: $muted; line-height: 1.5; }
+}
+.credito {
+  display: flex; gap: 12px;
+  border: 1.5px solid $border; border-radius: $radius; padding: 13px 14px;
+  &__num {
+    width: 34px; height: 34px; border-radius: 9px; flex: none;
+    display: flex; align-items: center; justify-content: center;
+    background: #F1F0EE; color: #6E6C68; font-size: 13px; font-weight: 700;
+  }
+  &__info { display: flex; flex-direction: column; gap: 3px; min-width: 0;
+    strong { font-size: 14px; }
+  }
+  &__rol { font-size: 11px; font-weight: 700; color: $accent-dark; text-transform: uppercase; letter-spacing: 0.4px; }
+  &__detalle { font-size: 12px; color: $muted; line-height: 1.4; }
 }
 .compra {
   display: flex; align-items: center; gap: 12px;
