@@ -3,12 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#2ECC71" />
+  <meta name="theme-color" content="#1E9E56" />
   <meta name="description" content="MiNevera: inventario de alimentos del hogar, alertas de vencimiento y lista de compras. Funciona sin internet." />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="MiNevera" />
   <title>MiNevera — Tu despensa organizada</title>
 </head>
 <body>
   <div id="root"></div>
   <script type="module" src="./src/main.jsx"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(() => {});
+      });
+    }
+  </script>
 </body>
 </html>
