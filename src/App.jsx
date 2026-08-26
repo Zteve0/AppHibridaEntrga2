@@ -8,6 +8,7 @@ import Agregar from './pages/Agregar.jsx';
 import Detalle from './pages/Detalle.jsx';
 import Vencer from './pages/Vencer.jsx';
 import Compras from './pages/Compras.jsx';
+import Creditos from './pages/Creditos.jsx';
 
 // HashRouter: la navegacion funciona offline e incluso abriendo dist/index.html directo
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
             <Route path='/alimento/:id' element={<Detalle />} />
             <Route path='/vencer' element={<Vencer />} />
             <Route path='/compras' element={<Compras />} />
+            <Route path='/creditos' element={<Creditos />} />
             <Route path='*' element={<Navigate to='/' replace />} />
           </Routes>
           <TabBar />
