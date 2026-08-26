@@ -14,8 +14,8 @@ export default function Agregar() {
   const set = (k) => (e) => setF({ ...f, [k]: e.target.value });
   const guardar = (e) => {
     e.preventDefault();
-    if (!f.nombre.trim() || !f.categoria || !(Number(f.cantidad) > 0) || !f.fecha) {
-      alert('Completa nombre, categoria, cantidad y fecha de vencimiento.');
+    if (!f.nombre.trim() || !f.categoria || !(Number(f.cantidad) > 0)) {
+      alert('Completa nombre, categoria y cantidad.');
       return;
     }
     const datos = { nombre: f.nombre.trim(), categoria: f.categoria, cantidad: Number(f.cantidad), unidad: f.unidad, fechaVencimiento: f.fecha, nota: f.nota.trim() };
@@ -38,10 +38,10 @@ export default function Agregar() {
           <label className='field'><span>Unidad</span>
             <select value={f.unidad} onChange={set('unidad')}>{UNIDADES.map(u => <option key={u}>{u}</option>)}</select></label>
         </div>
-        <label className='field'><span>Fecha de vencimiento</span>
+        <label className='field'><span>Fecha de vencimiento (opcional)</span>
           <input type='date' value={f.fecha} onChange={set('fecha')} /></label>
         <label className='field'><span>Nota (opcional)</span>
-          <textarea rows='3' value={f.nota} onChange={set('nota')} placeholder='Ej. Abierta el martes, consumir pronto'></textarea></label>
+          <textarea rows='3' value={f.nota} onChange={set('nota')} placeholder='Ej. Abierta el martes'></textarea></label>
         <button type='submit' className='btn btn--primario'>{existente ? 'Guardar cambios' : 'Guardar alimento'}</button>
         <button type='button' className='btn btn--fantasma' onClick={() => nav(-1)}>Cancelar</button>
       </form>
