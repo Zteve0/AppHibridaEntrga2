@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   base: './',
-  esbuild: { legalComments: 'none' },
+  esbuild: { legalComments: 'none', drop: ['console', 'debugger'] },
   css: { devSourcemap: false },
   build: {
     outDir: 'dist',
@@ -13,7 +13,8 @@ export default defineConfig({
     assetsInlineLimit: 100000000,
     target: 'es2020',
     minify: 'esbuild',
+    sourcemap: false,
     reportCompressedSize: false,
-    sourcemap: false
+    modulePreload: { polyfill: false }
   }
 });

@@ -12,10 +12,24 @@
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-title" content="MiNevera" />
   <title>MiNevera — Tu despensa organizada</title>
+  <style>
+    /* shell critico: pinta la barra superior antes de que React cargue */
+    html,body{margin:0;background:#FBFBFA;color:#2B2B28;
+      font-family:-apple-system,"Segoe UI",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+    #root{min-height:100vh}
+    .shell{max-width:430px;margin:0 auto;min-height:100vh;background:#fff}
+    .shell__bar{display:flex;align-items:center;gap:12px;padding:14px 20px;border-bottom:1.5px solid #ECEAE6}
+    .shell__logo{width:38px;height:38px;border-radius:12px;background:#E8F8F0;flex:none}
+    .shell__name{font-size:17px;font-weight:700}
+  </style>
 </head>
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <div class="shell">
+      <div class="shell__bar"><span class="shell__logo"></span><span class="shell__name">MiNevera</span></div>
+    </div>
+  </div>
   <script type="module" src="./src/main.jsx"></script>
-  <script src="./sw-register.js"></script>
+  <script src="./sw-register.js" defer></script>
 </body>
 </html>
