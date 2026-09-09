@@ -16,3 +16,7 @@ android/app/release/
 *.keystore
 *.jks
 key.properties
+
+# Skills locales de Claude Code y artefactos de build
+.claude/
+releases/
