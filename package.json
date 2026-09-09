@@ -9,7 +9,9 @@
     "preview": "vite preview",
     "cap:sync": "vite build && npx cap sync android",
     "cap:open": "npx cap open android",
-    "android": "vite build && npx cap sync android && npx cap open android"
+    "android": "vite build && npx cap sync android && npx cap open android",
+    "android:apk": "vite build && npx cap sync android && cd android && gradlew assembleRelease",
+    "android:aab": "vite build && npx cap sync android && cd android && gradlew bundleRelease"
   },
   "dependencies": {
     "@capacitor/android": "^7.0.0",
