@@ -53,15 +53,14 @@ por urgencia y lista de compras. Todo funciona sin conexión a internet.
 ```
 
 ## Assets listos en resources/
-- `icon.png` (1024×1024) — para el ícono de Play, redimensiona a 512×512
+- `play-icon-512.png` (512×512) — ícono de la ficha de Play, listo para subir
 - `play-feature-graphic.png` (1024×500) — gráfico destacado
-- `splash.png` (2732×2732) — pantalla de carga de la app
+- `icon.png` (1024×1024) y `splash.png` (2732×2732) — fuentes del build nativo
 
 ## Capturas de pantalla (mínimo 2, máximo 8)
-Toma pantallazos del emulador o del teléfono en estas pantallas:
-1. Inicio (resumen + próximos a vencer)
-2. Mis Alimentos (con filtros de categoría)
-3. Próximos a Vencer (grupos de vencidos y próximos)
-4. Lista de Compras
+Ya tomadas del APK de release en el emulador, en `resources/screenshots/` (1080×2400 PNG):
 
-Formato: PNG o JPG, entre 320 y 3840 px de lado, proporción 16:9 o 9:16.
+1. `01-inicio.png` — resumen y próximos a vencer
+2. `02-alimentos.png` — inventario con filtros de categoría
+3. `03-por-vencer.png` — vencidos y próximos, ordenados por urgencia
+4. `04-compras.png` — lista de compras con pendientes y comprados
