@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">MiNevera</string>
+    <string name="title_activity_main">MiNevera</string>
+    <string name="package_name">com.minevera.app</string>
+    <string name="custom_url_scheme">com.minevera.app</string>
+</resources>
