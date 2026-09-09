@@ -65,6 +65,12 @@ Google Play exige **.aab** (no APK). Necesitas una llave de firma.
 
 ### 3.1 Crear la llave (una sola vez)
 
+> **Ya está creada.** La llave vive en `C:\Users\steve\Documents\minevera-claves\minevera-release.jks`
+> y sus credenciales en `android/key.properties` (fuera de git). Con eso, `npm run android:aab`
+> genera el bundle firmado sin abrir Android Studio. **No crees una llave nueva:** Google Play
+> asocia la app a la primera que se suba, y una segunda llave hace imposible actualizarla.
+> Si necesitas rehacerla desde cero:
+
 En Android Studio: **Build → Generate Signed App Bundle / APK → Android App Bundle → Next → Create new…**
 
 Llena:
@@ -160,15 +166,15 @@ Reparto sugerido (yo la mayoría, ellos cambios menores):
 
 ## Checklist final del taller
 
-- [ ] `npx cap add android` ejecutado y carpeta `android/` en el repo
-- [ ] App corriendo en emulador o teléfono real
-- [ ] **Prueba en modo avión** funcionando (grábala en video para la sustentación)
-- [ ] Íconos y splash generados
-- [ ] `.aab` firmado generado
-- [ ] Llave `.jks` guardada fuera del repo y respaldada
+- [x] `npx cap add android` ejecutado y carpeta `android/` en el repo
+- [x] App corriendo en emulador o teléfono real
+- [x] **Prueba en modo avión** funcionando — verificada en el emulador (falta grabar el video para la sustentación)
+- [x] Íconos y splash generados
+- [x] `.aab` firmado generado
+- [x] Llave `.jks` guardada fuera del repo y respaldada
 - [ ] Cuenta de Play Console activa
 - [ ] Ficha completa: descripción, ícono, gráfico destacado, 2+ capturas
-- [ ] Política de privacidad publicada y enlazada
+- [x] Política de privacidad publicada y enlazada
 - [ ] Cuestionarios: data safety, clasificación, público, anuncios
 - [ ] Release subido y en revisión (internal testing o producción)
 - [ ] Enlace de la app o captura del estado "En revisión" para la entrega
