@@ -1,5 +1,13 @@
 apply plugin: 'com.android.application'
 
+// Credenciales de firma: android/key.properties (fuera de git).
+// Sin ese archivo el build de release sigue funcionando, pero sale sin firmar.
+def propsFirma = new Properties()
+def archivoFirma = rootProject.file('key.properties')
+if (archivoFirma.exists()) {
+    archivoFirma.withInputStream { propsFirma.load(it) }
+}
+
 android {
     namespace "com.minevera.app"
     compileSdk rootProject.ext.compileSdkVersion
@@ -16,10 +24,23 @@ android {
             ignoreAssetsPattern '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
         }
     }
+    signingConfigs {
+        release {
+            if (propsFirma.containsKey('storeFile')) {
+                storeFile rootProject.file(propsFirma['storeFile'])
+                storePassword propsFirma['storePassword']
+                keyAlias propsFirma['keyAlias']
+                keyPassword propsFirma['keyPassword']
+            }
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            if (propsFirma.containsKey('storeFile')) {
+                signingConfig signingConfigs.release
+            }
         }
     }
 }
