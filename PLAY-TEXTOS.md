@@ -58,7 +58,9 @@ por urgencia y lista de compras. Todo funciona sin conexión a internet.
 - `icon.png` (1024×1024) y `splash.png` (2732×2732) — fuentes del build nativo
 
 ## Capturas de pantalla (mínimo 2, máximo 8)
-Ya tomadas del APK de release en el emulador, en `resources/screenshots/` (1080×2400 PNG):
+Las que se subieron a Play están en `resources/screenshots-play/` (1080×1920 PNG, proporción 9:16).
+Play rechaza las originales de `resources/screenshots/` porque miden 1080×2400 y su proporción es 9:20.
+Las de Play son las mismas pantallas centradas sobre el fondo de la app, sin recortar contenido.
 
 1. `01-inicio.png` — resumen y próximos a vencer
 2. `02-alimentos.png` — inventario con filtros de categoría
